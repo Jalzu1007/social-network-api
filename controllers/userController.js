@@ -1,6 +1,7 @@
 const {User, Thought} = require('../models');
 
 module.exports = {
+    // Get all users
   async getUsers(req, res) {
     try {
       const users = await User.find();
@@ -9,6 +10,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // Get a single user
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId });
@@ -22,6 +24,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // Create a new user
   async createUser(req, res) {
     try {
       const dbUserData = await User.create(req.body);
@@ -30,6 +33,7 @@ module.exports = {
       res.status(500).json(err)
     }
   },
+  // Delete a user and remove their thought
   async deleteUser(req, res){
     try{
         const dbUserData = await User.findOneAndRemove({ _id: req.params.userId })
