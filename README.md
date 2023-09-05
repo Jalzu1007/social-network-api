@@ -57,9 +57,12 @@ API Routes
     - DELETE /api/thoughts/:thoughtId/reactions: Delete a reaction.
 
 GitHub Repository:
+
 https://github.com/Jalzu1007/social-network-api.git
 
 Walkthrough Video:
+
+[![social-network-api](https://img.youtube.com/vi/GUTeYN9eM34/0.jpg)](https://youtu.be/GUTeYN9eM34)
 
 
 ## Credits
